@@ -22,6 +22,8 @@
       
       <tag>Mac 软件错误</tag>
       
+      <tag>软件已损坏</tag>
+      
     </tags>
     
   </entry>
@@ -71,6 +73,12 @@
     <tags>
       
       <tag>网络存储</tag>
+      
+      <tag>SMB 共享</tag>
+      
+      <tag>服务器连接</tag>
+      
+      <tag>网络驱动器</tag>
       
     </tags>
     
