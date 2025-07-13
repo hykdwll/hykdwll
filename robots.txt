@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-
-# Sitemap declarations
-Sitemap: https://www.eryang.top/sitemap.xml
-Sitemap: https://www.eryang.top/sitemap.txt
-Sitemap: https://www.eryang.top/atom.xml
