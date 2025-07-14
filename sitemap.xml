@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.eryang.top/2025/07/11/som/</loc>
+    <loc>http://localhost:4000/2025/07/14/%E5%B9%BB%E6%83%B3%E7%94%9F%E6%B4%BBi/</loc>
     
     <lastmod>2025-07-14</lastmod>
     
@@ -11,7 +11,25 @@
   </url>
   
   <url>
-    <loc>https://www.eryang.top/2025/07/11/Mac%E8%BD%AF%E4%BB%B6%E6%8D%9F%E5%9D%8F/</loc>
+    <loc>http://localhost:4000/about/index.html</loc>
+    
+    <lastmod>2025-07-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/2025/07/11/som/</loc>
+    
+    <lastmod>2025-07-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/2025/07/11/Mac%E8%BD%AF%E4%BB%B6%E6%8D%9F%E5%9D%8F/</loc>
     
     <lastmod>2025-07-13</lastmod>
     
@@ -20,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://www.eryang.top/2025/07/13/Win%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD/</loc>
+    <loc>http://localhost:4000/2025/07/13/Win%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD/</loc>
     
     <lastmod>2025-07-13</lastmod>
     
@@ -29,16 +47,7 @@
   </url>
   
   <url>
-    <loc>https://www.eryang.top/about/index.html</loc>
-    
-    <lastmod>2025-07-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.eryang.top/2025/07/11/mlt/</loc>
+    <loc>http://localhost:4000/2025/07/11/mlt/</loc>
     
     <lastmod>2025-07-12</lastmod>
     
@@ -48,7 +57,7 @@
   
 
   <url>
-    <loc>https://www.eryang.top/</loc>
+    <loc>http://localhost:4000/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -56,84 +65,105 @@
 
   
   <url>
-    <loc>https://www.eryang.top/tags/Windows-%E9%95%9C%E5%83%8F/</loc>
+    <loc>http://localhost:4000/tags/Mac-%E8%BD%AF%E4%BB%B6%E9%94%99%E8%AF%AF/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD/</loc>
+    <loc>http://localhost:4000/tags/%E8%BD%AF%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/Windows-11/</loc>
+    <loc>http://localhost:4000/tags/Windows-%E9%95%9C%E5%83%8F/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/Windows-10/</loc>
+    <loc>http://localhost:4000/tags/%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/Windows-7/</loc>
+    <loc>http://localhost:4000/tags/Windows-11/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/Mac-%E8%BD%AF%E4%BB%B6%E9%94%99%E8%AF%AF/</loc>
+    <loc>http://localhost:4000/tags/Windows-10/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/%E8%BD%AF%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F/</loc>
+    <loc>http://localhost:4000/tags/Windows-7/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/Markdown-%E8%AF%AD%E6%B3%95/</loc>
+    <loc>http://localhost:4000/tags/%E7%BD%91%E7%BB%9C%E5%AD%98%E5%82%A8/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/%E7%BD%91%E7%BB%9C%E5%AD%98%E5%82%A8/</loc>
+    <loc>http://localhost:4000/tags/SMB-%E5%85%B1%E4%BA%AB/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/SMB-%E5%85%B1%E4%BA%AB/</loc>
+    <loc>http://localhost:4000/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5/</loc>
+    <loc>http://localhost:4000/tags/%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/</loc>
+    <loc>http://localhost:4000/tags/Markdown-%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/tags/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/tags/switch/</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/tags/%E5%B9%BB%E6%83%B3%E7%94%9F%E6%B4%BBi/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -142,14 +172,28 @@
 
   
   <url>
-    <loc>https://www.eryang.top/categories/Windows-%E9%95%9C%E5%83%8F/</loc>
+    <loc>http://localhost:4000/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://localhost:4000/categories/Windows-%E9%95%9C%E5%83%8F/</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/categories/%E6%B8%B8%E6%88%8F/switch/</loc>
     <lastmod>2025-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
