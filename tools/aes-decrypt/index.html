@@ -1,0 +1,172 @@
+<!-- source/tools/aes-decrypt/index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AES 文本解密工具</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#64748b',
+                        accent: '#06b6d4',
+                        dark: '#1e293b',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-all-300 {
+                transition: all 0.3s ease;
+            }
+            .bg-gradient-primary {
+                background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            }
+            .card-shadow {
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            }
+            .btn-hover {
+                @apply transform hover:scale-105 transition-all duration-300;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-gray-800 dark:bg-dark dark:text-gray-100 min-h-screen transition-all duration-300">
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 md:p-8 mb-8 card-shadow">
+            <h2 class="text-xl font-bold mb-6 text-gray-800 dark:text-gray-200">
+                <i class="fa fa-unlock-alt text-primary mr-2"></i>文本解密工具
+            </h2>
+            
+            <div class="mb-6">
+                <label for="encrypted-text" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">加密文本</label>
+                <textarea id="encrypted-text" class="w-full h-32 p-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 focus:ring-2 focus:ring-primary focus:border-primary transition-all resize-none" placeholder="粘贴加密文本..."></textarea>
+            </div>
+            
+            <div class="mb-6">
+                <label for="decrypt-password" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">解密密码</label>
+                <div class="relative">
+                    <input type="password" id="decrypt-password" class="w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="输入解密密码...">
+                    <button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" id="toggle-decrypt-password">
+                        <i class="fa fa-eye-slash"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <button id="decrypt-btn" class="w-full bg-gradient-primary text-white py-3 px-6 rounded-lg font-medium shadow-lg hover:shadow-xl hover:opacity-95 transition-all duration-300 btn-hover">
+                <i class="fa fa-unlock-alt mr-2"></i>解密文本
+            </button>
+            
+            <div id="decryption-result" class="mt-6 hidden">
+                <div class="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-700">
+                    <h3 class="font-medium text-green-800 dark:text-green-300 mb-2">解密成功</h3>
+                    <div id="decrypted-result" class="p-3 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 font-mono text-sm overflow-x-auto"></div>
+                </div>
+            </div>
+            
+            <div id="decryption-error" class="mt-6 hidden">
+                <div class="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-200 dark:border-red-700">
+                    <h3 class="font-medium text-red-800 dark:text-red-300 mb-2">解密失败</h3>
+                    <p id="error-message" class="text-red-700 dark:text-red-400">密码错误或文本格式不正确</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DOM元素
+        const decryptBtn = document.getElementById('decrypt-btn');
+        const encryptedText = document.getElementById('encrypted-text');
+        const decryptPassword = document.getElementById('decrypt-password');
+        const decryptionResult = document.getElementById('decryption-result');
+        const decryptedResult = document.getElementById('decrypted-result');
+        const decryptionError = document.getElementById('decryption-error');
+        const errorMessage = document.getElementById('error-message');
+        const toggleDecryptPassword = document.getElementById('toggle-decrypt-password');
+        
+        // 密码显示/隐藏切换
+        toggleDecryptPassword.addEventListener('click', () => {
+            const type = decryptPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+            decryptPassword.setAttribute('type', type);
+            toggleDecryptPassword.innerHTML = type === 'password' ? '<i class="fa fa-eye-slash"></i>' : '<i class="fa fa-eye"></i>';
+        });
+        
+        // 解密功能
+        decryptBtn.addEventListener('click', () => {
+            const encrypted = encryptedText.value.trim();
+            const password = decryptPassword.value.trim();
+            
+            if (!encrypted) {
+                showError('请输入加密文本');
+                return;
+            }
+            
+            if (!password) {
+                showError('请输入解密密码');
+                return;
+            }
+            
+            try {
+                // 使用 AES 解密
+                const bytes = CryptoJS.AES.decrypt(encrypted, password);
+                const originalText = bytes.toString(CryptoJS.enc.Utf8);
+                
+                if (originalText) {
+                    decryptedResult.textContent = originalText;
+                    decryptionResult.classList.remove('hidden');
+                    decryptionError.classList.add('hidden');
+                    
+                    // 平滑滚动到结果
+                    decryptionResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else {
+                    throw new Error('解密失败，可能是密码错误');
+                }
+            } catch (error) {
+                showError('解密失败: ' + error.message);
+                console.error('解密错误:', error);
+            }
+        });
+        
+        function showError(message) {
+            errorMessage.textContent = message;
+            decryptionError.classList.remove('hidden');
+            decryptionResult.classList.add('hidden');
+            
+            // 添加错误动画
+            decryptionError.classList.add('animate-pulse');
+            setTimeout(() => {
+                decryptionError.classList.remove('animate-pulse');
+            }, 1000);
+        }
+        
+        // 从URL参数获取加密文本
+        const urlParams = new URLSearchParams(window.location.search);
+        const encryptedParam = urlParams.get('text');
+        if (encryptedParam) {
+            encryptedText.value = decodeURIComponent(encryptedParam);
+        }
+    </script>
+</body>
+</html>
