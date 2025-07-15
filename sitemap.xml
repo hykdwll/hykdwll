@@ -65,6 +65,20 @@
 
   
   <url>
+    <loc>https://www.eryang.top/tags/Mac-%E8%BD%AF%E4%BB%B6%E9%94%99%E8%AF%AF/</loc>
+    <lastmod>2025-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.eryang.top/tags/%E8%BD%AF%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F/</loc>
+    <lastmod>2025-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.eryang.top/tags/Windows-%E9%95%9C%E5%83%8F/</loc>
     <lastmod>2025-07-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -100,14 +114,21 @@
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/Mac-%E8%BD%AF%E4%BB%B6%E9%94%99%E8%AF%AF/</loc>
+    <loc>https://www.eryang.top/tags/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2025-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/%E8%BD%AF%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F/</loc>
+    <loc>https://www.eryang.top/tags/switch/</loc>
+    <lastmod>2025-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.eryang.top/tags/%E5%B9%BB%E6%83%B3%E7%94%9F%E6%B4%BBi/</loc>
     <lastmod>2025-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -142,27 +163,6 @@
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2025-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.eryang.top/tags/switch/</loc>
-    <lastmod>2025-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.eryang.top/tags/%E5%B9%BB%E6%83%B3%E7%94%9F%E6%B4%BBi/</loc>
-    <lastmod>2025-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.eryang.top/tags/xbox/</loc>
     <lastmod>2025-07-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -179,14 +179,14 @@
 
   
   <url>
-    <loc>https://www.eryang.top/categories/Windows-%E9%95%9C%E5%83%8F/</loc>
+    <loc>https://www.eryang.top/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://www.eryang.top/categories/Windows-%E9%95%9C%E5%83%8F/</loc>
     <lastmod>2025-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
