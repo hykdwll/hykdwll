@@ -2,6 +2,9 @@ User-agent: *
 Allow: /
 
 # Sitemap declarations
+# 标准站点地图（XML格式，包含所有页面）
 Sitemap: https://www.eryang.top/sitemap.xml
+# 纯文本站点地图（简化版URL列表）
 Sitemap: https://www.eryang.top/sitemap.txt
+# Atom格式站点地图（适用于RSS订阅类内容）
 Sitemap: https://www.eryang.top/atom.xml
