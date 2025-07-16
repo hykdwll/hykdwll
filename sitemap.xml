@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:4000/2024/06/05/win11%E4%BC%98%E5%8C%96%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://www.eryang.top/2025/07/16/win11%E4%BC%98%E5%8C%96%E6%8C%87%E5%8D%97/</loc>
     
     <lastmod>2025-07-16</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/2025/07/15/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA%E7%99%BB%E9%99%86Xbox/</loc>
+    <loc>https://www.eryang.top/2025/07/16/hexo-tag-dplayer/</loc>
     
     <lastmod>2025-07-16</lastmod>
     
@@ -20,7 +20,16 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/2025/07/13/Win%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD/</loc>
+    <loc>https://www.eryang.top/2025/07/15/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA%E7%99%BB%E9%99%86Xbox/</loc>
+    
+    <lastmod>2025-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.eryang.top/2025/07/13/Win%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD/</loc>
     
     <lastmod>2025-07-15</lastmod>
     
@@ -29,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/2025/07/14/%E5%B9%BB%E6%83%B3%E7%94%9F%E6%B4%BBi/</loc>
+    <loc>https://www.eryang.top/2025/07/14/%E5%B9%BB%E6%83%B3%E7%94%9F%E6%B4%BBi/</loc>
     
     <lastmod>2025-07-15</lastmod>
     
@@ -38,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/2025/07/11/Mac%E8%BD%AF%E4%BB%B6%E6%8D%9F%E5%9D%8F/</loc>
+    <loc>https://www.eryang.top/2025/07/11/Mac%E8%BD%AF%E4%BB%B6%E6%8D%9F%E5%9D%8F/</loc>
     
     <lastmod>2025-07-15</lastmod>
     
@@ -47,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/about/index.html</loc>
+    <loc>https://www.eryang.top/about/index.html</loc>
     
     <lastmod>2025-07-14</lastmod>
     
@@ -56,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/2025/07/11/som/</loc>
+    <loc>https://www.eryang.top/2025/07/11/som/</loc>
     
     <lastmod>2025-07-14</lastmod>
     
@@ -66,7 +75,7 @@
   
 
   <url>
-    <loc>http://localhost:4000/</loc>
+    <loc>https://www.eryang.top/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -74,126 +83,147 @@
 
   
   <url>
-    <loc>http://localhost:4000/tags/Windows-%E9%95%9C%E5%83%8F/</loc>
+    <loc>https://www.eryang.top/tags/Windows-%E9%95%9C%E5%83%8F/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD/</loc>
+    <loc>https://www.eryang.top/tags/%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/Windows-11/</loc>
+    <loc>https://www.eryang.top/tags/Windows-11/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/Windows-10/</loc>
+    <loc>https://www.eryang.top/tags/Windows-10/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/Windows-7/</loc>
+    <loc>https://www.eryang.top/tags/Windows-7/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/Mac-%E8%BD%AF%E4%BB%B6%E9%94%99%E8%AF%AF/</loc>
+    <loc>https://www.eryang.top/tags/Mac-%E8%BD%AF%E4%BB%B6%E9%94%99%E8%AF%AF/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/%E8%BD%AF%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F/</loc>
+    <loc>https://www.eryang.top/tags/%E8%BD%AF%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/%E7%BD%91%E7%BB%9C%E5%AD%98%E5%82%A8/</loc>
+    <loc>https://www.eryang.top/tags/Hexo/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/SMB-%E5%85%B1%E4%BA%AB/</loc>
+    <loc>https://www.eryang.top/tags/DPlayer/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5/</loc>
+    <loc>https://www.eryang.top/tags/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8%EF%BC%8C%E5%BC%B9%E5%B9%95%E5%8A%9F%E8%83%BD/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/</loc>
+    <loc>https://www.eryang.top/tags/%E7%BD%91%E7%BB%9C%E5%AD%98%E5%82%A8/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/Windows11/</loc>
+    <loc>https://www.eryang.top/tags/SMB-%E5%85%B1%E4%BA%AB/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/</loc>
+    <loc>https://www.eryang.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/%E6%B8%B8%E6%88%8F/</loc>
+    <loc>https://www.eryang.top/tags/%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/switch/</loc>
+    <loc>https://www.eryang.top/tags/Windows11/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/%E5%B9%BB%E6%83%B3%E7%94%9F%E6%B4%BBi/</loc>
+    <loc>https://www.eryang.top/tags/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/xbox/</loc>
+    <loc>https://www.eryang.top/tags/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/%E9%BB%91%E7%A5%9E%E8%AF%9D%EF%BC%9A%E6%82%9F%E7%A9%BA/</loc>
+    <loc>https://www.eryang.top/tags/switch/</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.eryang.top/tags/%E5%B9%BB%E6%83%B3%E7%94%9F%E6%B4%BBi/</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.eryang.top/tags/xbox/</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.eryang.top/tags/%E9%BB%91%E7%A5%9E%E8%AF%9D%EF%BC%9A%E6%82%9F%E7%A9%BA/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -202,49 +232,63 @@
 
   
   <url>
-    <loc>http://localhost:4000/categories/Windows-%E9%95%9C%E5%83%8F/</loc>
+    <loc>https://www.eryang.top/categories/Windows-%E9%95%9C%E5%83%8F/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://www.eryang.top/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://www.eryang.top/categories/Hexo/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <loc>https://www.eryang.top/categories/%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/categories/%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97/Windows/</loc>
+    <loc>https://www.eryang.top/categories/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/categories/%E6%B8%B8%E6%88%8F/switch/</loc>
+    <loc>https://www.eryang.top/categories/Hexo/%E6%8F%92%E4%BB%B6%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://localhost:4000/categories/%E6%B8%B8%E6%88%8F/xbox/</loc>
+    <loc>https://www.eryang.top/categories/%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97/Windows/</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.eryang.top/categories/%E6%B8%B8%E6%88%8F/switch/</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.eryang.top/categories/%E6%B8%B8%E6%88%8F/xbox/</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -1,0 +1,854 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/yang.png">
+  <link rel="icon" href="/img/yang.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#6d4836">
+  <meta name="author" content="二阳">
+  <meta name="keywords" content="阳的树屋，二阳生活随笔，二阳的部落阁">
+  
+    <meta name="description" content="在 Hexo 博客嵌入弹幕视频：hexo-tag-dplayer 插件全指南如果你想给 Hexo 博客的文章添加一个支持弹幕、截图、快捷键的高颜值视频播放器，那么 hexo-tag-dplayer 插件绝对值得一试。这款插件将开源播放器 DPlayer 无缝集成到 Hexo 中，让你轻松实现类似 B 站的视频互动体验。今天就来详细聊聊它的安装、使用和进阶技巧。 关于 hexo-tag-dplaye">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 博客嵌入弹幕视频：hexo-tag-dplayer 插件全指南">
+<meta property="og:url" content="https://www.eryang.top/2025/07/16/hexo-tag-dplayer/index.html">
+<meta property="og:site_name" content="阳的树屋">
+<meta property="og:description" content="在 Hexo 博客嵌入弹幕视频：hexo-tag-dplayer 插件全指南如果你想给 Hexo 博客的文章添加一个支持弹幕、截图、快捷键的高颜值视频播放器，那么 hexo-tag-dplayer 插件绝对值得一试。这款插件将开源播放器 DPlayer 无缝集成到 Hexo 中，让你轻松实现类似 B 站的视频互动体验。今天就来详细聊聊它的安装、使用和进阶技巧。 关于 hexo-tag-dplaye">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-07-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-07-16T12:37:53.582Z">
+<meta property="article:author" content="二阳">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="DPlayer">
+<meta property="article:tag" content="视频播放器，弹幕功能">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Hexo 博客嵌入弹幕视频：hexo-tag-dplayer 插件全指南 - 阳的树屋</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"www.eryang.top","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"ce3c3daeabef1b79893f2da8c29d2fad","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?ce3c3daeabef1b79893f2da8c29d2fad";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<link rel="alternate" href="/atom.xml" title="阳的树屋" type="application/atom+xml">
+</head>
+<!-- 在head.ejs中添加 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>阳的树屋</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Hexo 博客嵌入弹幕视频：hexo-tag-dplayer 插件全指南"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-07-16 00:00" pubdate>
+          2025年7月16日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Hexo 博客嵌入弹幕视频：hexo-tag-dplayer 插件全指南</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="在-Hexo-博客嵌入弹幕视频：hexo-tag-dplayer-插件全指南"><a href="#在-Hexo-博客嵌入弹幕视频：hexo-tag-dplayer-插件全指南" class="headerlink" title="在 Hexo 博客嵌入弹幕视频：hexo-tag-dplayer 插件全指南"></a>在 Hexo 博客嵌入弹幕视频：hexo-tag-dplayer 插件全指南</h1><p>如果你想给 Hexo 博客的文章添加一个支持弹幕、截图、快捷键的高颜值视频播放器，那么 <code>hexo-tag-dplayer</code> 插件绝对值得一试。这款插件将开源播放器 DPlayer 无缝集成到 Hexo 中，让你轻松实现类似 B 站的视频互动体验。今天就来详细聊聊它的安装、使用和进阶技巧。</p>
+<h2 id="关于-hexo-tag-dplayer"><a href="#关于-hexo-tag-dplayer" class="headerlink" title="关于 hexo-tag-dplayer"></a>关于 hexo-tag-dplayer</h2><p><code>hexo-tag-dplayer</code> 是一款将 DPlayer 播放器集成到 Hexo 的插件，由开发者基于 DIYgod 的 DPlayer 移植而来，借鉴了 hexo-tag-aplayer 的实现思路。用官方的话说：“本项目是将 DIYgod 的 DPlayer 运行在 Hexo 的插件”。</p>
+<blockquote>
+<p>有趣的是，官方文档里还自嘲：“这个项目的两个维护者一个只会卖萌，一个又沉迷屁股（这是豆子），所以有什么 bug 很长时间没解决的，请谅解”。如果遇到问题，也欢迎提交 PR 参与修复哦~</p>
+</blockquote>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>在 Hexo 博客根目录下，通过 npm 即可快速安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-tag-dplayer --save<br></code></pre></td></tr></table></figure>
+
+<p>安装完成后无需额外配置，直接在文章中使用标签即可调用播放器。</p>
+<h2 id="基本用法：通过标签嵌入播放器"><a href="#基本用法：通过标签嵌入播放器" class="headerlink" title="基本用法：通过标签嵌入播放器"></a>基本用法：通过标签嵌入播放器</h2><p>在 Markdown 文章中，使用 <code>&#123;% dplayer %&#125;</code> 标签即可嵌入播放器，语法格式为：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% dplayer key=value ... %&#125;<br></code></pre></td></tr></table></figure>
+
+<p>其中 <code>key</code> 对应 DPlayer 的配置参数，支持多种类型的参数（布尔值、字符串、数字等）。下面是常用参数的详细说明：</p>
+<h3 id="1-基础播放参数"><a href="#1-基础播放参数" class="headerlink" title="1. 基础播放参数"></a>1. 基础播放参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>autoplay</code></td>
+<td>布尔值</td>
+<td>是否自动播放（启用值：<code>yes</code>&#x2F;<code>y</code>&#x2F;<code>true</code>&#x2F;<code>1</code>，或直接写参数名）</td>
+<td><code>autoplay=yes</code> 或 <code>autoplay</code></td>
+</tr>
+<tr>
+<td><code>loop</code></td>
+<td>布尔值</td>
+<td>是否循环播放</td>
+<td><code>loop=true</code></td>
+</tr>
+<tr>
+<td><code>screenshot</code></td>
+<td>布尔值</td>
+<td>是否允许截图（需视频支持）</td>
+<td><code>screenshot=1</code></td>
+</tr>
+<tr>
+<td><code>hotkey</code></td>
+<td>布尔值</td>
+<td>是否启用快捷键（空格暂停、方向键快进等）</td>
+<td><code>hotkey=y</code></td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>字符串</td>
+<td>视频资源地址（本地&#x2F;网络 URL）</td>
+<td><code>url=https://example.com/video.mp4</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>字符串</td>
+<td>视频封面图片地址</td>
+<td><code>pic=./cover.jpg</code></td>
+</tr>
+<tr>
+<td><code>volume</code></td>
+<td>数字</td>
+<td>初始音量（0-1 之间）</td>
+<td><code>volume=0.5</code>（50% 音量）</td>
+</tr>
+<tr>
+<td><code>theme</code></td>
+<td>字符串</td>
+<td>播放器主题色</td>
+<td><code>theme=#FADFA3</code></td>
+</tr>
+<tr>
+<td><code>width</code>&#x2F;<code>height</code></td>
+<td>字符串</td>
+<td>播放器尺寸（CSS 格式）</td>
+<td><code>width=100%</code> <code>height=400px</code></td>
+</tr>
+</tbody></table>
+<h3 id="2-弹幕功能参数"><a href="#2-弹幕功能参数" class="headerlink" title="2. 弹幕功能参数"></a>2. 弹幕功能参数</h3><p>DPlayer 最具特色的就是弹幕功能，配置以下参数即可启用：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>id</code></td>
+<td>视频唯一标识（用于区分不同视频的弹幕）</td>
+</tr>
+<tr>
+<td><code>api</code></td>
+<td>弹幕接口地址（如官方示例 <code>https://api.prprpr.me/dplayer/</code>）</td>
+</tr>
+<tr>
+<td><code>token</code></td>
+<td>弹幕接口验证令牌（可选）</td>
+</tr>
+<tr>
+<td><code>dmuser</code></td>
+<td>发送弹幕时的默认用户名</td>
+</tr>
+<tr>
+<td><code>addition</code></td>
+<td>额外弹幕数据源（JSON 地址）</td>
+</tr>
+</tbody></table>
+<h3 id="3-字幕功能参数"><a href="#3-字幕功能参数" class="headerlink" title="3. 字幕功能参数"></a>3. 字幕功能参数</h3><p>如果需要为视频添加字幕，可配置这些参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>suburl</code></td>
+<td>字幕文件地址（支持 .vtt 格式）</td>
+</tr>
+<tr>
+<td><code>subtype</code></td>
+<td>字幕类型（默认 <code>webvtt</code>）</td>
+</tr>
+<tr>
+<td><code>subcolor</code></td>
+<td>字幕颜色</td>
+</tr>
+<tr>
+<td><code>subbottom</code></td>
+<td>字幕距离底部的距离（如 <code>20px</code>）</td>
+</tr>
+</tbody></table>
+<h2 id="实用示例"><a href="#实用示例" class="headerlink" title="实用示例"></a>实用示例</h2><h3 id="示例-1：基础视频播放（带封面和自动播放）"><a href="#示例-1：基础视频播放（带封面和自动播放）" class="headerlink" title="示例 1：基础视频播放（带封面和自动播放）"></a>示例 1：基础视频播放（带封面和自动播放）</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% dplayer &quot;url=https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.mp4&quot; &quot;pic=https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.jpg&quot; &quot;autoplay&quot; &quot;theme=#FADFA3&quot; &quot;width=100%&quot; %&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这段代码会生成一个自适应宽度、自动播放、主题色为浅橙色的播放器，并显示指定封面。</p>
+<h3 id="示例-2：带弹幕的循环播放视频"><a href="#示例-2：带弹幕的循环播放视频" class="headerlink" title="示例 2：带弹幕的循环播放视频"></a>示例 2：带弹幕的循环播放视频</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% dplayer &quot;url=./videos/my-video.mp4&quot; &quot;loop=yes&quot; &quot;screenshot=yes&quot; &quot;id=my-video-id&quot; &quot;api=https://api.prprpr.me/dplayer/&quot; &quot;dmuser=访客&quot; &quot;hotkey=yes&quot; %&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这里启用了循环播放、截图功能和快捷键，同时通过 <code>id</code> 和 <code>api</code> 配置了弹幕接口，用户可以发送和查看弹幕。</p>
+<h3 id="示例-3：带字幕的视频"><a href="#示例-3：带字幕的视频" class="headerlink" title="示例 3：带字幕的视频"></a>示例 3：带字幕的视频</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% dplayer &quot;url=https://example.com/movie.mp4&quot; &quot;suburl=https://example.com/subtitles.vtt&quot; &quot;subcolor=#ffffff&quot; &quot;subbottom=15px&quot; &quot;volume=0.3&quot; %&#125;<br></code></pre></td></tr></table></figure>
+
+<p>该示例为视频添加了白色字幕，字幕位置距离底部 15px，初始音量 30%。</p>
+<h2 id="自定义配置"><a href="#自定义配置" class="headerlink" title="自定义配置"></a>自定义配置</h2><p>如果需要全局修改播放器的默认参数（如默认主题色、脚本路径等），可以在 Hexo 根目录的 <code>_config.yml</code> 中添加配置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">hexo-tag-dplayer:</span><br>  <span class="hljs-attr">js_path:</span> <span class="hljs-string">/assets/js/dplayer/</span>  <span class="hljs-comment"># DPlayer 脚本文件路径（默认自动加载）</span><br>  <span class="hljs-attr">css_path:</span> <span class="hljs-string">/assets/css/dplayer/</span> <span class="hljs-comment"># 样式文件路径</span><br>  <span class="hljs-attr">default:</span>  <span class="hljs-comment"># 所有播放器的默认参数</span><br>    <span class="hljs-attr">theme:</span> <span class="hljs-string">&#x27;#4285F4&#x27;</span>  <span class="hljs-comment"># 默认主题色（谷歌蓝）</span><br>    <span class="hljs-attr">volume:</span> <span class="hljs-number">0.2</span>       <span class="hljs-comment"># 默认音量 20%</span><br>    <span class="hljs-attr">api:</span> <span class="hljs-string">https://api.prprpr.me/dplayer/</span>  <span class="hljs-comment"># 默认弹幕接口</span><br></code></pre></td></tr></table></figure>
+
+<p>配置后，所有 <code>&#123;% dplayer %&#125;</code> 标签都会继承这些默认参数，无需重复设置。</p>
+<h2 id="解决常见问题"><a href="#解决常见问题" class="headerlink" title="解决常见问题"></a>解决常见问题</h2><h3 id="1-支持-PJAX-页面切换"><a href="#1-支持-PJAX-页面切换" class="headerlink" title="1. 支持 PJAX 页面切换"></a>1. 支持 PJAX 页面切换</h3><p>如果你的博客使用 PJAX 实现无刷新跳转，需要在 PJAX 事件中销毁播放器，避免重复加载导致的冲突：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;pjax:start&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">window</span>.<span class="hljs-property">dplayers</span>) &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-variable language_">window</span>.<span class="hljs-property">dplayers</span>.<span class="hljs-property">length</span>; i++) &#123;<br>            <span class="hljs-variable language_">window</span>.<span class="hljs-property">dplayers</span>[i].<span class="hljs-title function_">destroy</span>();<br>        &#125;<br>        <span class="hljs-variable language_">window</span>.<span class="hljs-property">dplayers</span> = [];<br>    &#125;<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+
+<h3 id="2-插件-Bug-临时解决方案"><a href="#2-插件-Bug-临时解决方案" class="headerlink" title="2. 插件 Bug 临时解决方案"></a>2. 插件 Bug 临时解决方案</h3><p>如果遇到插件未修复的 Bug，可以直接使用 Hexo 的 <code></code> 标签嵌入 DPlayer 原生代码：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% raw %&#125;<br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dplayer&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dplayer&quot;</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/dplayer@1.27.1/dist/DPlayer.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span><br>var dp = new DPlayer(&#123;<br><span class="hljs-code">    container: document.getElementById(&#x27;dplayer&#x27;),</span><br><span class="hljs-code">    autoplay: false,</span><br><span class="hljs-code">    theme: &#x27;#FADFA3&#x27;,</span><br><span class="hljs-code">    loop: true,</span><br><span class="hljs-code">    video: &#123;</span><br><span class="hljs-code">        url: &#x27;demo.mp4&#x27;,</span><br><span class="hljs-code">        pic: &#x27;demo.png&#x27;</span><br><span class="hljs-code">    &#125;,</span><br><span class="hljs-code">    danmaku: &#123;</span><br><span class="hljs-code">        id: &#x27;demo&#x27;,</span><br><span class="hljs-code">        api: &#x27;https://api.prprpr.me/dplayer/&#x27;</span><br><span class="hljs-code">    &#125;</span><br><span class="hljs-code">&#125;);</span><br><span class="hljs-code">&lt;/script&gt;</span><br><span class="hljs-code">&#123;% endraw %&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>这种方式绕过插件直接调用 DPlayer，适合临时解决兼容性问题。</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p><code>hexo-tag-dplayer</code> 插件让 Hexo 博客的视频展示变得简单而强大，无论是分享教程、音乐 MV 还是个人作品，都能通过弹幕和互动功能提升读者参与感。虽然官方自嘲维护精力有限，但插件的核心功能已经相当稳定，对于大多数博客场景来说足够实用。</p>
+<p>如果你的博客需要嵌入视频，不妨试试这款插件，让文章内容更加生动~ 也欢迎参与项目贡献，一起完善这个工具！</p>
+<blockquote>
+<p>参考资料：<a target="_blank" rel="noopener" href="https://github.com/...">hexo-tag-dplayer 官方文档</a>、<a target="_blank" rel="noopener" href="https://github.com/DIYgod/DPlayer">DPlayer 官方仓库</a></p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Hexo/" class="category-chain-item">Hexo</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Hexo/%E6%8F%92%E4%BB%B6%E6%95%99%E7%A8%8B/" class="category-chain-item">插件教程</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Hexo/" class="print-no-link">#Hexo</a>
+      
+        <a href="/tags/DPlayer/" class="print-no-link">#DPlayer</a>
+      
+        <a href="/tags/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8%EF%BC%8C%E5%BC%B9%E5%B9%95%E5%8A%9F%E8%83%BD/" class="print-no-link">#视频播放器，弹幕功能</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Hexo 博客嵌入弹幕视频：hexo-tag-dplayer 插件全指南</div>
+      <div>https://www.eryang.top/2025/07/16/hexo-tag-dplayer/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>二阳</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年7月16日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/07/16/win11%E4%BC%98%E5%8C%96%E6%8C%87%E5%8D%97/" title="Windows 11 优化设置指南：让电脑焕新如丝滑">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Windows 11 优化设置指南：让电脑焕新如丝滑</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/07/15/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA%E7%99%BB%E9%99%86Xbox/" title="黑神话悟空登陆Xbox">
+                        <span class="hidden-mobile">黑神话悟空登陆Xbox</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://www.eryang.top/atom.xml" class="inline-flex items-center hover:text-rss transition-colors"> <img src="/img/rss.png" srcset="/img/loading.gif" lazyload alt="RSS订阅" width="28" height="28"> RSS订阅 </a> 
+    </div>
+  
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      鄂ICP备2022000479号-1
+    </a>
+  </span>
+  
+</div>
+
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
