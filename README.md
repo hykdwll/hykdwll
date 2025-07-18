@@ -1,16 +1,22 @@
-## Hi there 👋
+你好～ 我是 Eryang，「[Eryang's Blog]((https://www.eryang.top/)」的维护者。  
 
-<!--
-**hykdwll/hykdwll** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 关于博主  
+作为一名沉迷技术实操的数码爱好者，我日常总在和系统、软件、网络设备打交道——从 macOS 的隐藏功能到 Linux 的命令行技巧，从 NAS 网络存储搭建到 Hexo 博客配置，踩过不少坑，也攒下了一堆经过实测的解决方案。  
 
-Here are some ideas to get you started:
+开博客的初心，就是把这些「实战经验」记下来：毕竟自己摔过的跤，没必要让别人再摔一次。  
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 博客里有什么？  
+这里的内容聚焦「实用技术」，主打一个“拿来就能用”，主要包括：  
+
+- **系统与镜像指南**：Windows、macOS、Linux 官方镜像的正规获取渠道，以及详细的安装/重装步骤（附常见报错解决）；  
+- **软件与工具技巧**：从 Mac 软件“已损坏”问题修复，到 Hexo 插件（如弹幕视频播放器）的使用教程，再到网络存储（SMB 共享）的配置方法；  
+- **网络与硬件干货**：网线接法、路由器设置、NAS 搭建等网络布线实操，帮你搞定家庭/办公组网的各种细节。  
+
+## 为什么来这里？  
+内容会尽量避开“空话理论”，只写「经过验证的步骤」：比如教你装系统，就附上图文并茂的分区操作；讲软件报错，就给具体的终端命令——毕竟技术分享的价值，在于能实实在在帮人解决问题。  
+
+## 联系与交流  
+如果有技术问题想聊、发现内容有误，或者想看某类教程，欢迎随时找我：  
+- 邮箱：[x@eryang.top](mailto:x@eryang.top)  
+
+感谢你的停留，希望你能在这里找到需要的答案～ 😊
