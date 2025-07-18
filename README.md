@@ -1,4 +1,4 @@
-你好～ 我是 Eryang，「[Eryang's Blog](https://www.eryang.top/)」的维护者。  
+你好～ 我是 Eryang，「[阳的树屋](https://www.eryang.top/)」的维护者。  
 
 ## 关于博主  
 作为一名沉迷技术实操的数码爱好者，我日常总在和系统、软件、网络设备打交道——从 macOS 的隐藏功能到 Linux 的命令行技巧，从 NAS 网络存储搭建到 Hexo 博客配置，踩过不少坑，也攒下了一堆经过实测的解决方案。  
