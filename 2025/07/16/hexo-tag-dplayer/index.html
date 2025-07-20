@@ -26,15 +26,15 @@
 <meta property="og:site_name" content="阳的树屋">
 <meta property="og:description" content="想在 Hexo 博客中嵌入带弹幕、支持截图和快捷键的高颜值视频播放器？本文详解 hexo-tag-dplayer 插件的使用指南，包括安装步骤、基础用法（通过标签调用播放器，含播放参数、弹幕功能、字幕配置等）、实用示例、自定义全局配置，以及解决 PJAX 兼容、插件 Bug 等常见问题，助你轻松实现类似 B 站的视频互动体验。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pic1.zhimg.com/80/v2-908557aec213558eaf7930d03cde93a7_1440w.webp?source=2c26e567">
+<meta property="og:image" content="https://upyun.eryang.top/img/hexo-tag-dplayer.png">
 <meta property="article:published_time" content="2025-07-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-07-19T05:52:30.641Z">
+<meta property="article:modified_time" content="2025-07-20T08:31:10.997Z">
 <meta property="article:author" content="二阳">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="DPlayer">
 <meta property="article:tag" content="视频播放器，弹幕功能">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pic1.zhimg.com/80/v2-908557aec213558eaf7930d03cde93a7_1440w.webp?source=2c26e567">
+<meta name="twitter:image" content="https://upyun.eryang.top/img/hexo-tag-dplayer.png">
   
   
   
@@ -114,7 +114,7 @@
 
   
 <link rel="alternate" href="/atom.xml" title="阳的树屋" type="application/atom+xml">
-</head>
+<script src="/assets/js/DPlayer.min.js"></script></head>
 <!-- 在head.ejs中添加 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 
@@ -253,7 +253,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          1.6k 字
         
       </span>
     
@@ -264,7 +264,7 @@
         
         
         
-          13 分钟
+          14 分钟
         
       </span>
     
@@ -307,14 +307,16 @@
               <div class="markdown-body">
                 
                 <p>如果你想给 Hexo 博客的文章添加一个支持弹幕、截图、快捷键的高颜值视频播放器，那么 <code>hexo-tag-dplayer</code> 插件绝对值得一试。这款插件将开源播放器 DPlayer 无缝集成到 Hexo 中，让你轻松实现类似 B 站的视频互动体验。今天就来详细聊聊它的安装、使用和进阶技巧。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-908557aec213558eaf7930d03cde93a7_1440w.webp?source=2c26e567" srcset="/img/loading.gif" lazyload alt="DPlayer播放器"></p>
+<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px; width:100%;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"autoplay":true,"theme":"#FADFA3","video":{"url":"https://upyun.eryang.top/video/xbox%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA.mp4","pic":"https://picx.zhimg.com/v2-377d8014c2b5e535de12ec229627680a_r.jpg?source=12a79843"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
 <h2 id="关于-hexo-tag-dplayer"><a href="#关于-hexo-tag-dplayer" class="headerlink" title="关于 hexo-tag-dplayer"></a>关于 hexo-tag-dplayer</h2><p><code>hexo-tag-dplayer</code> 是一款将 DPlayer 播放器集成到 Hexo 的插件，由开发者基于 DIYgod 的 DPlayer 移植而来，借鉴了 hexo-tag-aplayer 的实现思路。用官方的话说：“本项目是将 DIYgod 的 DPlayer 运行在 Hexo 的插件”。</p>
 <blockquote>
 <p>有趣的是，官方文档里还自嘲：“这个项目的两个维护者一个只会卖萌，一个又沉迷屁股（这是豆子），所以有什么 bug 很长时间没解决的，请谅解”。如果遇到问题，也欢迎提交 PR 参与修复哦~</p>
 </blockquote>
 <h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>在 Hexo 博客根目录下，通过 npm 即可快速安装：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-tag-dplayer --save<br></code></pre></td></tr></table></figure>
-<p><img src="http://upyun.eryang.top/npm%20install%20hexo-tag-dplayer%20--save.png" srcset="/img/loading.gif" lazyload alt="npm install hexo-tag-dplayer --save"></p>
+
+<p><img src="https://upyun.eryang.top/img/install-hexo-tag-dplayer.png" srcset="/img/loading.gif" lazyload alt="npm install hexo-tag-dplayer --save"></p>
 <p>安装完成后无需额外配置，直接在文章中使用标签即可调用播放器。</p>
 <h2 id="基本用法：通过标签嵌入播放器"><a href="#基本用法：通过标签嵌入播放器" class="headerlink" title="基本用法：通过标签嵌入播放器"></a>基本用法：通过标签嵌入播放器</h2><p>在 Markdown 文章中，使用 <code>&#123;% dplayer %&#125;</code> 标签即可嵌入播放器，语法格式为：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% dplayer key=value ... %&#125;<br></code></pre></td></tr></table></figure>
@@ -448,15 +450,14 @@
 
 <p>该示例为视频添加了白色字幕，字幕位置距离底部 15px，初始音量 30%。</p>
 <h2 id="自定义配置"><a href="#自定义配置" class="headerlink" title="自定义配置"></a>自定义配置</h2><p>如果需要全局修改播放器的默认参数（如默认主题色、脚本路径等），可以在 Hexo 根目录的 <code>_config.yml</code> 中添加配置：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">hexo-tag-dplayer:</span><br>  <span class="hljs-attr">js_path:</span> <span class="hljs-string">/assets/js/dplayer/</span>  <span class="hljs-comment"># DPlayer 脚本文件路径（默认自动加载）</span><br>  <span class="hljs-attr">css_path:</span> <span class="hljs-string">/assets/css/dplayer/</span> <span class="hljs-comment"># 样式文件路径</span><br>  <span class="hljs-attr">default:</span>  <span class="hljs-comment"># 所有播放器的默认参数</span><br>    <span class="hljs-attr">theme:</span> <span class="hljs-string">&#x27;#4285F4&#x27;</span>  <span class="hljs-comment"># 默认主题色（谷歌蓝）</span><br>    <span class="hljs-attr">volume:</span> <span class="hljs-number">0.2</span>       <span class="hljs-comment"># 默认音量 20%</span><br>    <span class="hljs-attr">api:</span> <span class="hljs-string">https://api.prprpr.me/dplayer/</span>  <span class="hljs-comment"># 默认弹幕接口</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">hexo-tag-dplayer:</span><br>  <span class="hljs-attr">js_path:</span> <span class="hljs-string">/assets/js/dplayer/</span> <span class="hljs-comment"># DPlayer 脚本文件路径（默认自动加载）</span><br>  <span class="hljs-attr">css_path:</span> <span class="hljs-string">/assets/css/dplayer/</span> <span class="hljs-comment"># 样式文件路径</span><br>  <span class="hljs-attr">default:</span> <span class="hljs-comment"># 所有播放器的默认参数</span><br>    <span class="hljs-attr">theme:</span> <span class="hljs-string">&quot;#4285F4&quot;</span> <span class="hljs-comment"># 默认主题色（谷歌蓝）</span><br>    <span class="hljs-attr">volume:</span> <span class="hljs-number">0.2</span> <span class="hljs-comment"># 默认音量 20%</span><br>    <span class="hljs-attr">api:</span> <span class="hljs-string">https://api.prprpr.me/dplayer/</span> <span class="hljs-comment"># 默认弹幕接口</span><br></code></pre></td></tr></table></figure>
 
 <p>配置后，所有 <code>&#123;% dplayer %&#125;</code> 标签都会继承这些默认参数，无需重复设置。</p>
 <h2 id="解决常见问题"><a href="#解决常见问题" class="headerlink" title="解决常见问题"></a>解决常见问题</h2><h3 id="1-支持-PJAX-页面切换"><a href="#1-支持-PJAX-页面切换" class="headerlink" title="1. 支持 PJAX 页面切换"></a>1. 支持 PJAX 页面切换</h3><p>如果你的博客使用 PJAX 实现无刷新跳转，需要在 PJAX 事件中销毁播放器，避免重复加载导致的冲突：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;pjax:start&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">window</span>.<span class="hljs-property">dplayers</span>) &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-variable language_">window</span>.<span class="hljs-property">dplayers</span>.<span class="hljs-property">length</span>; i++) &#123;<br>            <span class="hljs-variable language_">window</span>.<span class="hljs-property">dplayers</span>[i].<span class="hljs-title function_">destroy</span>();<br>        &#125;<br>        <span class="hljs-variable language_">window</span>.<span class="hljs-property">dplayers</span> = [];<br>    &#125;<br>&#125;);<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;pjax:start&quot;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">window</span>.<span class="hljs-property">dplayers</span>) &#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-variable language_">window</span>.<span class="hljs-property">dplayers</span>.<span class="hljs-property">length</span>; i++) &#123;<br>      <span class="hljs-variable language_">window</span>.<span class="hljs-property">dplayers</span>[i].<span class="hljs-title function_">destroy</span>();<br>    &#125;<br>    <span class="hljs-variable language_">window</span>.<span class="hljs-property">dplayers</span> = [];<br>  &#125;<br>&#125;);<br></code></pre></td></tr></table></figure>
 
 <h3 id="2-插件-Bug-临时解决方案"><a href="#2-插件-Bug-临时解决方案" class="headerlink" title="2. 插件 Bug 临时解决方案"></a>2. 插件 Bug 临时解决方案</h3><p>如果遇到插件未修复的 Bug，可以直接使用 Hexo 的 <code></code> 标签嵌入 DPlayer 原生代码：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% raw %&#125;<br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dplayer&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dplayer&quot;</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/dplayer@1.27.1/dist/DPlayer.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span><br>var dp = new DPlayer(&#123;<br><span class="hljs-code">    container: document.getElementById(&#x27;dplayer&#x27;),</span><br><span class="hljs-code">    autoplay: false,</span><br><span class="hljs-code">    theme: &#x27;#FADFA3&#x27;,</span><br><span class="hljs-code">    loop: true,</span><br><span class="hljs-code">    video: &#123;</span><br><span class="hljs-code">        url: &#x27;demo.mp4&#x27;,</span><br><span class="hljs-code">        pic: &#x27;demo.png&#x27;</span><br><span class="hljs-code">    &#125;,</span><br><span class="hljs-code">    danmaku: &#123;</span><br><span class="hljs-code">        id: &#x27;demo&#x27;,</span><br><span class="hljs-code">        api: &#x27;https://api.prprpr.me/dplayer/&#x27;</span><br><span class="hljs-code">    &#125;</span><br><span class="hljs-code">&#125;);</span><br><span class="hljs-code">&lt;/script&gt;</span><br><span class="hljs-code">&#123;% endraw %&#125;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% raw %&#125;<br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dplayer&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dplayer&quot;</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/dplayer@1.27.1/dist/DPlayer.min.js&quot;</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span><br>var dp = new DPlayer(&#123;<br><span class="hljs-code">    container: document.getElementById(&#x27;dplayer&#x27;),</span><br><span class="hljs-code">    autoplay: false,</span><br><span class="hljs-code">    theme: &#x27;#FADFA3&#x27;,</span><br><span class="hljs-code">    loop: true,</span><br><span class="hljs-code">    video: &#123;</span><br><span class="hljs-code">        url: &#x27;demo.mp4&#x27;,</span><br><span class="hljs-code">        pic: &#x27;demo.png&#x27;</span><br><span class="hljs-code">    &#125;,</span><br><span class="hljs-code">    danmaku: &#123;</span><br><span class="hljs-code">        id: &#x27;demo&#x27;,</span><br><span class="hljs-code">        api: &#x27;https://api.prprpr.me/dplayer/&#x27;</span><br><span class="hljs-code">    &#125;</span><br><span class="hljs-code">&#125;);</span><br><span class="hljs-code">&lt;/script&gt;</span><br><span class="hljs-code">&#123;% endraw %&#125;</span><br></code></pre></td></tr></table></figure>
 
 <p>这种方式绕过插件直接调用 DPlayer，适合临时解决兼容性问题。</p>
 <h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p><code>hexo-tag-dplayer</code> 插件让 Hexo 博客的视频展示变得简单而强大，无论是分享教程、音乐 MV 还是个人作品，都能通过弹幕和互动功能提升读者参与感。虽然官方自嘲维护精力有限，但插件的核心功能已经相当稳定，对于大多数博客场景来说足够实用。</p>
