@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具页面</title>
+    <style>
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #0056b3;
+            --background-color: #f4f4f4;
+            --card-bg-color: #fff;
+            --text-color: #333;
+            --light-text-color: #666;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 0;
+        }
+
+        .tool-card {
+            background-color: var(--card-bg-color);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            list-style-type: none;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .tool-card a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .tool-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .tool-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .tool-description {
+            font-size: 1rem;
+            color: var(--light-text-color);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>工具目录</h1>
+    <ul class="tool-grid">
+        <li class="tool-card">
+            <a href="aes-decrypt/">
+                <div class="tool-icon">🔒</div>
+                <div class="tool-name">AES 解密工具</div>
+                <div class="tool-description">使用 AES 算法解密数据</div>
+            </a>
+        </li>
+        <li class="tool-card">
+            <a href="video-player/">
+                <div class="tool-icon">📺</div>
+                <div class="tool-name">视频播放器</div>
+                <div class="tool-description">在线播放各类视频</div>
+            </a>
+        </li>
+        
+    </ul>
+</body>
+</html>
