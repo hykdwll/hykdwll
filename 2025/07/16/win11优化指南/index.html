@@ -513,11 +513,17 @@
   
     <article id="comments" lazyload>
       
-  <div id="SOHUCS" sid='https://www.eryang.top/2025/07/16/win11%E4%BC%98%E5%8C%96%E6%8C%87%E5%8D%97/'></div>
+  <div id="discuss-comments"></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#SOHUCS', function() {
-      Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
-        window.changyan.api.config({"appid":"cyy2ihsFK","appkey":"64e6432b4bc3f17cf6029e5114b8859a"})
+    Fluid.utils.loadComments('#comments', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/discuss/1.2.1/discuss.js', function() {
+        var options = Object.assign(
+          {"serverURLs":"https://pinglun-taupe.vercel.app","path":"window.location.pathname"},
+          { el: '#discuss-comments',
+            path: window.location.pathname
+          }
+        )
+        discuss.init(options)
       });
     });
   </script>
