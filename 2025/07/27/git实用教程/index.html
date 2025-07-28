@@ -19,16 +19,16 @@
   <meta name="author" content="二阳">
   <meta name="keywords" content="网络存储, 系统优化, 软件教程, Hexo博客, 技术指南, 阳的树屋">
   
-    <meta name="description" content="Git 实用教程：从入门到熟练掌握版本控制Git 是目前最流行的分布式版本控制系统，被广泛用于软件开发、文档管理等场景。它能帮助你追踪文件的每一次修改，方便多人协作，还能在需要时轻松回滚到历史版本。本教程将从基础操作到进阶技巧，带你全面掌握 Git 的使用。 三大核心区域graph LR     A[工作区 Working Directory] --&gt;|git add| B[暂存区 Stag">
+    <meta name="description" content="Git 实用教程：从入门到熟练掌握版本控制Git 是目前最流行的分布式版本控制系统，被广泛用于软件开发、文档管理等场景。它能帮助你追踪文件的每一次修改，方便多人协作，还能在需要时轻松回滚到历史版本。本教程将从基础操作到进阶技巧，带你全面掌握 Git 的使用。 一、Git 安装与初始化1. 安装 Git Windows：下载 Git for Windows，安装时保持默认选项即可（会自动配置环境变量">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 进阶指南：从基础操作到团队协作最佳实践">
 <meta property="og:url" content="https://www.eryang.top/2025/07/27/git%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="阳的树屋">
-<meta property="og:description" content="Git 实用教程：从入门到熟练掌握版本控制Git 是目前最流行的分布式版本控制系统，被广泛用于软件开发、文档管理等场景。它能帮助你追踪文件的每一次修改，方便多人协作，还能在需要时轻松回滚到历史版本。本教程将从基础操作到进阶技巧，带你全面掌握 Git 的使用。 三大核心区域graph LR     A[工作区 Working Directory] --&gt;|git add| B[暂存区 Stag">
+<meta property="og:description" content="Git 实用教程：从入门到熟练掌握版本控制Git 是目前最流行的分布式版本控制系统，被广泛用于软件开发、文档管理等场景。它能帮助你追踪文件的每一次修改，方便多人协作，还能在需要时轻松回滚到历史版本。本教程将从基础操作到进阶技巧，带你全面掌握 Git 的使用。 一、Git 安装与初始化1. 安装 Git Windows：下载 Git for Windows，安装时保持默认选项即可（会自动配置环境变量">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img2.baidu.com/it/u=4111550966,3885404596&fm=253&fmt=auto&app=138&f=JPEG?w=891&h=500">
 <meta property="article:published_time" content="2025-07-27T11:16:05.000Z">
-<meta property="article:modified_time" content="2025-07-27T11:25:46.835Z">
+<meta property="article:modified_time" content="2025-07-28T11:32:05.339Z">
 <meta property="article:author" content="二阳">
 <meta property="article:tag" content="Git">
 <meta property="article:tag" content="版本控制">
@@ -278,7 +278,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.2k 字
+          2.1k 字
         
       </span>
     
@@ -289,7 +289,7 @@
         
         
         
-          19 分钟
+          18 分钟
         
       </span>
     
@@ -332,13 +332,6 @@
               <div class="markdown-body">
                 
                 <h1 id="Git-实用教程：从入门到熟练掌握版本控制"><a href="#Git-实用教程：从入门到熟练掌握版本控制" class="headerlink" title="Git 实用教程：从入门到熟练掌握版本控制"></a>Git 实用教程：从入门到熟练掌握版本控制</h1><p>Git 是目前最流行的分布式版本控制系统，被广泛用于软件开发、文档管理等场景。它能帮助你追踪文件的每一次修改，方便多人协作，还能在需要时轻松回滚到历史版本。本教程将从基础操作到进阶技巧，带你全面掌握 Git 的使用。</p>
-<h3 id="三大核心区域"><a href="#三大核心区域" class="headerlink" title="三大核心区域"></a>三大核心区域</h3><pre><code class=" mermaid">graph LR
-    A[工作区 Working Directory] --&gt;|git add| B[暂存区 Staging Area]
-    B --&gt;|git commit| C[本地仓库 Local Repository]
-    C --&gt;|git push| D[远程仓库 Remote Repository]
-    D --&gt;|git pull| C
-</code></pre>
-
 <h2 id="一、Git-安装与初始化"><a href="#一、Git-安装与初始化" class="headerlink" title="一、Git 安装与初始化"></a>一、Git 安装与初始化</h2><h3 id="1-安装-Git"><a href="#1-安装-Git" class="headerlink" title="1. 安装 Git"></a>1. 安装 Git</h3><ul>
 <li><strong>Windows</strong>：下载 <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git for Windows</a>，安装时保持默认选项即可（会自动配置环境变量，包含 Git Bash 终端）。</li>
 <li><strong>macOS</strong>：通过 Homebrew 安装（<code>brew install git</code>），或直接下载 <a target="_blank" rel="noopener" href="https://git-scm.com/download/mac">官方安装包</a>。</li>
@@ -556,9 +549,9 @@
   <div id="discuss-comments"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#comments', function() {
-      Fluid.utils.createScript('https://lib.baomitu.com/discuss/1.2.1/discuss.js', function() {
+      Fluid.utils.createScript('https://discuss.eryang.top/discuss.js', function() {
         var options = Object.assign(
-          {"serverURLs":"https://pinglun-taupe.vercel.app","path":"window.location.pathname"},
+          {"serverURLs":"https://discuss.eryang.top","path":"window.location.pathname"},
           { el: '#discuss-comments',
             path: window.location.pathname
           }
