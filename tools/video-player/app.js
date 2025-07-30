@@ -138,7 +138,8 @@ class Router {
         if (typeof discuss !== 'undefined') {
             discuss.init({
                 el: '#Discuss-Comments',
-                serverURLs: 'https://discuss.eryang.top/'
+                serverURLs: 'https://discuss.eryang.top/',
+                path: fullPath
             });
         }
     }
