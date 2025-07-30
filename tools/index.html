@@ -1,102 +1,57 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>工具页面</title>
-    <style>
-        :root {
-            --primary-color: #007BFF;
-            --secondary-color: #0056b3;
-            --background-color: #f4f4f4;
-            --card-bg-color: #fff;
-            --text-color: #333;
-            --light-text-color: #666;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-            font-size: 2.5rem;
-        }
-
-        .tool-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            padding: 0;
-        }
-
-        .tool-card {
-            background-color: var(--card-bg-color);
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            list-style-type: none;
-        }
-
-        .tool-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .tool-card a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem;
-            text-decoration: none;
-            color: var(--text-color);
-        }
-
-        .tool-icon {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .tool-name {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .tool-description {
-            font-size: 1rem;
-            color: var(--light-text-color);
-            text-align: center;
-        }
-    </style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>工具目录</h1>
-    <ul class="tool-grid">
-        <li class="tool-card">
-            <a href="aes-decrypt/">
-                <div class="tool-icon">🔒</div>
-                <div class="tool-name">AES 解密工具</div>
-                <div class="tool-description">使用 AES 算法解密数据</div>
-            </a>
-        </li>
-        <li class="tool-card">
-            <a href="video-player/">
-                <div class="tool-icon">📺</div>
-                <div class="tool-name">视频播放器</div>
-                <div class="tool-description">在线播放各类视频</div>
-            </a>
-        </li>
-        
-    </ul>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-toolbox"></i> 实用工具箱</h1>
+            <p>精选常用工具，提升工作效率</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalTools">0</div>
+                    <div class="stat-label">工具总数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="categoriesCount">0</div>
+                    <div class="stat-label">分类数量</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="popularTools">0</div>
+                    <div class="stat-label">热门工具</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search-input" id="toolSearch" placeholder="搜索工具名称、描述或标签...">
+            <i class="search-icon fas fa-search"></i>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="popular">热门</button>
+            <button class="filter-btn" data-filter="new">最新</button>
+        </div>
+
+        <div class="tools-grid" id="toolsContainer">
+            <!-- 工具卡片将通过JavaScript动态生成 -->
+        </div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <i class="fas fa-search" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+            <p>没有找到匹配的工具</p>
+            <p style="font-size: 0.9rem; opacity: 0.7;">试试其他关键词或浏览全部分类</p>
+        </div>
+    </div>
+
+<script src="tools-data.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
