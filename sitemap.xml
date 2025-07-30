@@ -126,14 +126,14 @@
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/%E8%BD%AF%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F/</loc>
+    <loc>https://www.eryang.top/tags/%E6%97%A0%E6%B3%95%E9%AA%8C%E8%AF%81/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/tags/%E6%97%A0%E6%B3%95%E9%AA%8C%E8%AF%81/</loc>
+    <loc>https://www.eryang.top/tags/%E8%BD%AF%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -259,6 +259,27 @@
   </url>
   
   <url>
+    <loc>https://www.eryang.top/tags/Hexo/</loc>
+    <lastmod>2025-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.eryang.top/tags/DPlayer/</loc>
+    <lastmod>2025-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.eryang.top/tags/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8%EF%BC%8C%E5%BC%B9%E5%B9%95%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2025-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.eryang.top/tags/%E7%BD%91%E7%BB%9C%E5%AD%98%E5%82%A8/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -280,6 +301,20 @@
   </url>
   
   <url>
+    <loc>https://www.eryang.top/tags/Windows11/</loc>
+    <lastmod>2025-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.eryang.top/tags/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2025-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.eryang.top/tags/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -295,41 +330,6 @@
   
   <url>
     <loc>https://www.eryang.top/tags/%E5%B9%BB%E6%83%B3%E7%94%9F%E6%B4%BBi/</loc>
-    <lastmod>2025-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.eryang.top/tags/Windows11/</loc>
-    <lastmod>2025-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.eryang.top/tags/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/</loc>
-    <lastmod>2025-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.eryang.top/tags/Hexo/</loc>
-    <lastmod>2025-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.eryang.top/tags/DPlayer/</loc>
-    <lastmod>2025-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.eryang.top/tags/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8%EF%BC%8C%E5%BC%B9%E5%B9%95%E5%8A%9F%E8%83%BD/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -387,7 +387,7 @@
   </url>
   
   <url>
-    <loc>https://www.eryang.top/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <loc>https://www.eryang.top/categories/Hexo/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -408,7 +408,7 @@
   </url>
   
   <url>
-    <loc>https://www.eryang.top/categories/Hexo/</loc>
+    <loc>https://www.eryang.top/categories/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -422,14 +422,14 @@
   </url>
   
   <url>
-    <loc>https://www.eryang.top/categories/%E6%B8%B8%E6%88%8F/switch/</loc>
+    <loc>https://www.eryang.top/categories/Hexo/%E6%8F%92%E4%BB%B6%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.eryang.top/categories/Hexo/%E6%8F%92%E4%BB%B6%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://www.eryang.top/categories/%E6%B8%B8%E6%88%8F/switch/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
