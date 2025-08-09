@@ -14,7 +14,7 @@ const videoDatabase = {
             title: "黑神话悟空 - 终极预告片", // 视频标题
             description: "国产3A大作震撼来袭！体验东方神话的史诗级冒险，悟空觉醒，天地变色！", // 视频描述
             url: "https://upyun.eryang.top/video/xbox%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA.mp4", // 视频文件URL
-            thumbnail: "https://picsum.photos/400/225?random=1", // 缩略图URL
+            thumbnail: "https://upyun.eryang.top/img/hexo-tag-dplayer.png", // 缩略图URL
             duration: "03:45", // 视频时长
             views: "2.3M", // 观看次数
             uploadDate: "2024-06-10", // 上传日期
@@ -40,15 +40,15 @@ const videoDatabase = {
          */
         {
             id: 2,
-            title: "赛博朋克2077: 幻影自由",
-            description: "夜之城的新篇章，V的终极冒险！",
-            url: "https://example.com/cyberpunk.mp4",
+            title: "测试",
+            description: "mac无法验证！",
+            url: "https://hykdwll.github.io/video/test.mp4",
             thumbnail: "https://picsum.photos/400/225?random=2",
             duration: "05:24",
             views: "234万",
             uploadDate: "2024-06-08",
             category: "游戏",
-            path: "/video/cyberpunk-phantom",
+            path: "/test",
             creator: {
                 name: "CD Projekt RED",
                 avatar: "CD",
@@ -129,7 +129,7 @@ const videoDatabase = {
      */
     routes: {
         "/heishenhua-wukong": 1,
-        "/video/cyberpunk-phantom": 2,
+        "/test": 2,
         "/video/genshin-4-5": 3,
         "/video/elden-ring-dlc": 4,
         "/": 1
